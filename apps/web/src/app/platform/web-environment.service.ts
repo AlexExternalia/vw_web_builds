@@ -41,14 +41,14 @@ export class WebEnvironmentService extends DefaultEnvironmentService {
     super(stateProvider, accountService, additionalRegionConfigs);
 
     // The web vault always uses the current location as the base url
-    // If the base URL is `https://vaultwarden.example.com/base/path/`,
+    // If the base URL is `https://GestorPass.example.com/base/path/`,
     // `window.location.href` should have one of the following forms:
     //
-    // - `https://vaultwarden.example.com/base/path/`
-    // - `https://vaultwarden.example.com/base/path/#/some/route[?queryParam=...]`
-    // - `https://vaultwarden.example.com/base/path/?queryParam=...`
+    // - `https://GestorPass.example.com/base/path/`
+    // - `https://GestorPass.example.com/base/path/#/some/route[?queryParam=...]`
+    // - `https://GestorPass.example.com/base/path/?queryParam=...`
     //
-    // We want to get to just `https://vaultwarden.example.com/base/path`.
+    // We want to get to just `https://GestorPass.example.com/base/path`.
     let baseUrl = this.win.location.href;
     baseUrl = baseUrl.replace(/(\/+|\/*#.*|\/*\?.*)$/, ""); // Strip off trailing `/`, `#`, `?` and everything after.
     envUrls.base ??= baseUrl;

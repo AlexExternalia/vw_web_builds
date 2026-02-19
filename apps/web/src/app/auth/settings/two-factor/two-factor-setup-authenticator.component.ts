@@ -225,11 +225,11 @@ export class TwoFactorSetupAuthenticatorComponent
     new window.QRious({
       element: document.getElementById("qr"),
       value:
-        "otpauth://totp/Vaultwarden:" +
+        "otpauth://totp/GestorPass:" +
         Utils.encodeRFC3986URIComponent(email) +
         "?secret=" +
         encodeURIComponent(this.key) +
-        "&issuer=Vaultwarden",
+        "&issuer=GestorPass",
       size: 160,
     });
   }

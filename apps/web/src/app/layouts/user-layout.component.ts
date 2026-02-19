@@ -51,7 +51,7 @@ export class UserLayoutComponent implements OnInit {
     private policyService: PolicyService,
     private configService: ConfigService,
   ) {
-    this.showSubscription$ = of(false); // always hide subscriptions in Vaultwarden
+    this.showSubscription$ = of(false); // always hide subscriptions in GestorPass
 
     this.showEmergencyAccess = toSignal(
       this.accountService.activeAccount$.pipe(
@@ -71,7 +71,7 @@ export class UserLayoutComponent implements OnInit {
     document.body.classList.remove("layout_frontend");
     await this.syncService.fullSync(false);
 
-    this.hasFamilySponsorshipAvailable$ = of(false); // disable family Sponsorships in Vaultwarden
-    this.showSponsoredFamilies$ = of(false); // disable family Sponsorships in Vaultwarden
+    this.hasFamilySponsorshipAvailable$ = of(false); // disable family Sponsorships in GestorPass
+    this.showSponsoredFamilies$ = of(false); // disable family Sponsorships in GestorPass
   }
 }

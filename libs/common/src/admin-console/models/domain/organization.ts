@@ -402,7 +402,7 @@ export class Organization {
   }
 
   get canAccessIntegrations() {
-    return false; // disable integrations for Vaultwarden
+    return false; // disable integrations for GestorPass
     return (
       (this.productTierType === ProductTierType.Teams ||
         this.productTierType === ProductTierType.Enterprise) &&
@@ -414,6 +414,6 @@ export class Organization {
   }
 
   get canUseAccessIntelligence() {
-    return false; // no access intelligence in Vaultwarden
+    return false; // no access intelligence in GestorPass
   }
 }
